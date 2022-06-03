@@ -1,5 +1,37 @@
-# mid point calculator
+import math
 import statistics
+
+
+def ClassBoundaries():
+    # set number
+    floor = 50000
+    # set number
+    ceiling = 290000
+    # set number
+    number_of_classes = 6
+    width = math.trunc((ceiling - floor) / number_of_classes)
+
+    print("width:", width)
+    print("")
+    # do not change
+    Counter = 0
+
+    class_floor = floor
+    class_ceiling = class_floor + width
+
+    while Counter < number_of_classes:
+        print(class_floor, " but less than ", class_ceiling)
+        print("class midpoint: ", (class_floor + class_ceiling) / 2)
+        class_floor = class_ceiling
+        class_ceiling = class_ceiling + width
+        Counter += 1
+        print("")
+
+    # for readability
+    print(" ")
+
+    # resetting counter back to zero
+    Counter = 0
 
 
 # Provide a range of numbers
@@ -8,13 +40,17 @@ def counter():
     # https://delim.co/#
 
     # x values
-    values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    # add x values
+    values = []
     # The_range is used to calculate the range of numbers that fall between the Range Min and Range Max
+    # LEAVE EMPTY
     The_range = []
     # Floor
-    Range_min = 10
+    # Set floor
+    Range_min = 0
     # Ceiling
-    Range_max = 14
+    # Set ceiling
+    Range_max = 0
     # frequency percent
 
     for i in range(len(values)):
@@ -27,7 +63,6 @@ def counter():
     print("Percentage Distribution: ", percent)
 
 
-counter()
 # added for readability
 print(" ")
 
@@ -37,7 +72,9 @@ def MainCalculation():
         the_value = ((Value - Mean) / StandDeviation)
         return round(the_value, 2)
 
-    listOfValues = [1, 2, 3, 4, 5, 4, 6, 7, 8, 9]
+    # list of x values
+    # add list of x values
+    listOfValues = []
     # sorted list that is only used to determine range
     sortedList = listOfValues.copy()
     sortedList.sort()
@@ -66,4 +103,6 @@ def MainCalculation():
                  "CoEfficient of Variation: ", round(coefficient_Of_Variation, 2))
 
 
-MainCalculation()
+ClassBoundaries()
+# counter()
+# MainCalculation()
