@@ -4,11 +4,11 @@ import statistics
 
 def ClassBoundaries():
     # set number
-    floor = 50000
+    floor = 0
     # set number
-    ceiling = 290000
+    ceiling = 0
     # set number
-    number_of_classes = 6
+    number_of_classes = 0
     width = math.trunc((ceiling - floor) / number_of_classes)
 
     print("width:", width)
@@ -103,6 +103,6 @@ def MainCalculation():
                  "CoEfficient of Variation: ", round(coefficient_Of_Variation, 2))
 
 
-ClassBoundaries()
+# ClassBoundaries()
 # counter()
 # MainCalculation()
