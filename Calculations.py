@@ -1,7 +1,7 @@
 import math
 import statistics
 
-
+# will create width, class boundaries and midpoints
 def ClassBoundaries():
     # set number
     floor = 0
